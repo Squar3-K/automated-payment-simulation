@@ -1,79 +1,232 @@
-.membership-container {
-    text-align: center;
-    margin-top: 20px; /* Adjust top margin as needed */
-  }
-  
-  .membership-container h2 {
-    font-size: 28px;
-    margin-bottom: 20px; /* Adjust bottom margin as needed */
-  }
-  
-  .subscription-container {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .subscription-container {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .subscriptions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 260px;
-    padding: 20px 1px;
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-    box-shadow: 0 10px 15px -3px rgba(33,150,243,.4), 0 4px 6px -4px rgba(33,150,243,.4);
-    border-radius: 10px;
-    background-color: #6B6ECC;
-    background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%);
-    margin: 20px; /* Adjusted margin to bring sections closer */
-  }
-  
-  .content {
-    padding: 20px;
-  }
-  
-  .content .price {
-    color: white;
-    font-weight: 800;
-    font-size: 50px;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
-  }
-  
-  .content .description {
-    color: rgba(255, 255, 255, 0.6);
-    margin-top: 10px;
-    font-size: 14px;
-  }
-  
-  .content .title {
-    font-weight: 800;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.64);
-    margin-top: 10px;
-    font-size: 25px;
-    letter-spacing: 1px;
-  }
-  
-  button {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    border: none;
-    outline: none;
-    color: rgb(255 255 255);
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: .75rem;
-    padding: 0.75rem 1.5rem;
-    background-color: rgb(33 150 243);
-    border-radius: 0.5rem;
-    width: 90%;
-    text-shadow: 0px 4px 18px #2c3442;
-  }
-  
+/* WebKit Scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the thumb (draggable part) */
+  border-radius: 4px; /* Rounded corners of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the thumb on hover */
+}
+
+.log-container {
+  max-width: calc(500% - 200px); /* Subtract the sidebar width from 100% */
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: -400px; /* Add some margin to the left to make space for the sidebar */
+}
+
+.log-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -200px;
+  margin-bottom: 3rem;
+}
+
+
+.log-title h1 {
+  position: absolute;
+  margin-left: 380px;
+  margin-top: 80px;
+  text-align: center;
+  flex-grow: 1; /* Allow the title to take up remaining space */
+}
+
+.user-dropdown-container {
+  display: flex;
+  align-items: center;
+}
+
+.user-dropdown {
+  position: absolute;
+  left: 1rem;
+}
+
+.user-dropdown button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+  padding: 0.35rem 0.5rem;
+  width: 40px;
+}
+
+.user-data {
+  position: fixed; /* Changed from absolute to fixed */
+  left: 1rem; /* Added left position */
+  top: 1rem; /* Added top position */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Added z-index */
+}
+.user-data p {
+  margin: 0.5rem 0;
+}
+
+.rmessage {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.pbutton {
+  margin-bottom: 1rem;
+}
+
+.pbutton a {
+  text-decoration: none;
+}
+
+.pbutton button {
+  border: none;
+  padding: 0.35rem 0.5rem;
+  width: 100px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Pbutton button{
+  margin: 10px;
+  cursor: pointer;
+  width: 150px;
+}
+
+.Log-table {
+  width: 430%;
+  border-collapse: collapse;
+}
+
+.Log-table th,
+.Log-table td {
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.Log-table th {
+  background-color: #ccc;
+  color: #333;
+  font-weight: bold;
+}
+
+.Log-table td {
+  background: rgba(211, 211, 211, 0.1);
+  box-shadow: rgba(128, 128, 128, 0.5) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.Log-table tr:nth-child(even) td {
+  background-color: rgba(211, 211, 211, 0.8);
+}
+.Lbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  position: relative;
+  padding: 0 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 0;
+  box-shadow: hsl(210deg 87% 36%) 0px 7px 0px 0px;
+  background-color: hsl(210deg 100% 44%);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 31ms cubic-bezier(.5, .7, .4, 1);
+  min-width: 150px; /* Add this line to set a minimum width */
+}
+
+ .Lbutton:before {
+  content: attr(alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  opacity: 1;
+ }
+ 
+ .Lbutton:active {
+  box-shadow: none;
+  transform: translateY(7px);
+  transition: 35ms cubic-bezier(.5, .7, .4, 1);
+ }
+ 
+ .Lbutton:hover:before {
+  transition: all .0s;
+  transform: translateY(100%);
+  opacity: 0;
+ }
+ 
+ .Lbutton i {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-style: normal;
+  transition: all 2s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+ }
+ 
+ .Lbutton:hover i {
+  transition: all .2s ease;
+  transform: translateY(0px);
+  opacity: 1;
+ }
+ 
+ .Lbutton:hover i:nth-child(1) {
+  transition-delay: 0.045s;
+ }
+ 
+ .Lbutton:hover i:nth-child(2) {
+  transition-delay: calc(0.045s * 3);
+ }
+ 
+ .Lbutton:hover i:nth-child(3) {
+  transition-delay: calc(0.045s * 4);
+ }
+ 
+ .Lbutton:hover i:nth-child(4) {
+  transition-delay: calc(0.045s * 5);
+ }
+ 
+ .Lbutton:hover i:nth-child(6) {
+  transition-delay: calc(0.045s * 6);
+ }
+ 
+ .Lbutton:hover i:nth-child(7) {
+  transition-delay: calc(0.045s * 7);
+ }
+ 
+ .Lbutton:hover i:nth-child(8) {
+  transition-delay: calc(0.045s * 8);
+ }
+ 
+ .Lbutton:hover i:nth-child(9) {
+  transition-delay: calc(0.045s * 9);
+ }
+ 
+ .Lbutton:hover i:nth-child(10) {
+  transition-delay: calc(0.045s * 10);
+ }

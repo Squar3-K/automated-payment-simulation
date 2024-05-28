@@ -1,13 +1,17 @@
 body {
   background-image: url(Animation.gif);
-  background-size: cover; /* Adjusted */
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: white;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-attachment: fixed; /* Added */
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 /* Hide scrollbar */
@@ -25,49 +29,72 @@ body {
 }
 
 .App {
-  text-align: center;
-  position: flex;
-  top: 100px; /* Leaves a space of 200px at the top */
+  position: fixed;
+  top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  background-color: rgba(40, 44, 52, 0.9); /* Grey semi-transparent background */
+  background: rgba(211, 211, 211, 0.1);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  /* height: 150px; */ /* Remove fixed height */
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
-  z-index: 1000; /* Ensures the header is above other content */
-  overflow-y: auto; /* Allow vertical scrolling */
+  z-index: 1000;
+  padding: 40px;
 }
 
-
-.App-header a, .App-header h6 {
-  margin-bottom: 1px; /* Adjust the value as needed */
+.App-header {
+  display: flex;
+  align-items: center;
+  margin-left: 850px; /* Reduce left margin */
 }
 
-.about-section{
+.App-header a,
+.App-header h6 {
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.App-header a {
+  margin-right: 5px; /* Add some space between a and h6 */
+}
+
+.App button {
+  font-size: 14px;
+  padding: 8px 16px;
+  width: 100px;
+  margin-right: 50px; /* Reduce right margin */
+}
+
+.about-section {
   justify-content: space-around;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px; /* Adjusted to account for the fixed .App header */
 }
 
 .about-container {
   display: flex;
-  flex-direction: column; /* Arrange children vertically */
-  justify-content: space-around; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  max-width: 800px;
 }
 
 .card {
   width: 690px;
   height: 754px;
   border-radius: 40px;
-  background: rgba(211, 211, 211, 0.1); /* Almost transparent grey background */
+  background: rgba(211, 211, 211, 0.1);
   box-shadow: rgba(128, 128, 128, 0.5) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
   justify-content: space-around;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
 }
 
 .about-heading {
@@ -86,6 +113,9 @@ body {
 
 .about-image {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
 
 .about-image img {
@@ -95,12 +125,25 @@ body {
   border-radius: 8px;
 }
 
+.about-button {
+  width: 200px; /* Adjust the width as desired */
+  display: flex;
+  justify-content: center;
+  margin-left: 240px;
+  margin-top: 30px;
+}
+
+.about-button button {
+  width: 100%; /* Make the button fill the width of its parent container */
+}
+
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust as needed */
+  height: 100vh;
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -111,6 +154,8 @@ body {
   width: 450px;
   border-radius: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0 auto;
+  max-width: 400px;
 }
 
 ::placeholder {
@@ -122,7 +167,7 @@ body {
 }
 
 .flex-column > label {
-  color: whitesmoke;
+  color: black;
   font-weight: 600;
 }
 
@@ -198,7 +243,6 @@ body {
 .button-submit:hover {
   background-color: #252727;
   border: 1px solid #2d79f3;
-
 }
 
 .p {

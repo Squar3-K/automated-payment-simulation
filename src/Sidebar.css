@@ -1,0 +1,165 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Use viewport height */
+    width: 200px;
+    background-color: black;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar-header span {
+    margin-left: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-content button {
+    margin-top: 300px;
+  }
+  .sidebar-a{
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .sidebar-b{
+    margin-top: 200px;
+    margin-left: 20px;
+  }
+  .date-picker {
+    position: absolute;
+    right: 4rem;
+    transform: translateY(-50%);
+  }
+  
+  .date-picker input {
+    padding: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50%;
+  }
+  
+  .react-datepicker {
+    position: absolute !important;
+  }
+  
+  /* Reduce the spacing between month and day slots */
+  .react-calendar__navigation {
+    margin-bottom: 0.2rem !important;
+    margin-left: -85px;
+    margin-top: -270px;
+  }
+
+  
+  
+  .react-calendar__month-view__days__day {
+    margin: 0.2rem !important;
+    margin-left: -5px !important;
+  }
+
+  .Lbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    position: relative;
+    padding: 0 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 0;
+    box-shadow: hsl(210deg 87% 36%) 0px 7px 0px 0px;
+    background-color: hsl(210deg 100% 44%);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 31ms cubic-bezier(.5, .7, .4, 1);
+    min-width: 150px; /* Add this line to set a minimum width */
+  }
+  
+   .Lbutton:before {
+    content: attr(alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 4px;
+    opacity: 1;
+   }
+   
+   .Lbutton:active {
+    box-shadow: none;
+    transform: translateY(7px);
+    transition: 35ms cubic-bezier(.5, .7, .4, 1);
+   }
+   
+   .Lbutton:hover:before {
+    transition: all .0s;
+    transform: translateY(100%);
+    opacity: 0;
+   }
+   
+   .Lbutton i {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-style: normal;
+    transition: all 2s ease;
+    transform: translateY(-20px);
+    opacity: 0;
+   }
+   
+   .Lbutton:hover i {
+    transition: all .2s ease;
+    transform: translateY(0px);
+    opacity: 1;
+   }
+   
+   .Lbutton:hover i:nth-child(1) {
+    transition-delay: 0.045s;
+   }
+   
+   .Lbutton:hover i:nth-child(2) {
+    transition-delay: calc(0.045s * 3);
+   }
+   
+   .Lbutton:hover i:nth-child(3) {
+    transition-delay: calc(0.045s * 4);
+   }
+   
+   .Lbutton:hover i:nth-child(4) {
+    transition-delay: calc(0.045s * 5);
+   }
+   
+   .Lbutton:hover i:nth-child(6) {
+    transition-delay: calc(0.045s * 6);
+   }
+   
+   .Lbutton:hover i:nth-child(7) {
+    transition-delay: calc(0.045s * 7);
+   }
+   
+   .Lbutton:hover i:nth-child(8) {
+    transition-delay: calc(0.045s * 8);
+   }
+   
+   .Lbutton:hover i:nth-child(9) {
+    transition-delay: calc(0.045s * 9);
+   }
+   
+   .Lbutton:hover i:nth-child(10) {
+    transition-delay: calc(0.045s * 10);
+   }

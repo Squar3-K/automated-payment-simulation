@@ -1,0 +1,48 @@
+.phone-number-container {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    max-width: 350px;
+  }
+  
+  .phone-number-label {
+    color: #4b5563;
+    font-size: 0.875rem;
+  }
+  
+  .country-code-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0.75rem;
+    display: flex;
+    align-items: center;
+    height: 1.5rem;
+    border-right: 1px solid #ccc;
+    padding-right: 0.5rem;
+  }
+  
+  .country-code-select {
+    font-size: 0.875rem;
+    outline: none;
+    border-radius: 0.25rem;
+    height: 100%;
+  }
+  
+  .phone-number-input {
+    width: 100%;
+    padding-left: 4.5rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    appearance: none;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 0.25rem;
+  }
+  
+  .phone-number-input:focus {
+    border-color: #94a3b8;
+  }

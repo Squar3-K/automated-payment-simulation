@@ -1,6 +1,6 @@
 .membership-container {
   text-align: center;
-  margin-top: 20px; /* Adjust top margin as needed */
+  margin-top: -200px; /* Adjust top margin as needed */
 }
 
 .membership-container h2 {
@@ -31,7 +31,7 @@
   border-radius: 10px;
   background-color: #6B6ECC;
   background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%);
-  margin: 20px; /* Adjusted margin to bring sections closer */
+  margin: 150px; /* Adjusted margin to bring sections closer */
 }
 
 .content {
