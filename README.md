@@ -1,3 +1,12 @@
+Automated Payment Simulation System
+This is an automated payment simulation system built using React for the frontend, Node.js and Express.js for the backend, and MSSQL as the database. The system utilizes APIs for simulating payment transactions and incorporates the Cors package to handle cross-origin resource sharing.
+Features
+
+User authentication and authorization
+Payment transaction simulation
+Transaction history and reporting
+Responsive and user-friendly interface
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
